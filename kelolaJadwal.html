@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Film</title>
+    <link rel="stylesheet" href="stylesK.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Film</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Tambah Film</h2>
+            <form id="addMovieForm">
+                <div>
+                    <label for="movieTitle">Judul Film:</label>
+                    <input type="text" id="movieTitle" required>
+                </div>
+                <div>
+                    <label for="movieSchedule">Jadwal Tayang:</label>
+                    <input type="text" id="movieSchedule" required>
+                </div>
+                <div>
+                    <label for="moviePoster">Poster (URL):</label>
+                    <input type="text" id="moviePoster" required>
+                </div>
+                <button type="submit">Tambah</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Daftar Film</h2>
+            <ul id="movieList"></ul>
+        </section>
+
+        <button id="uploadButton" style="display: none;">Upload</button>
+    </div>
+
+    <div class="back-btn-container">
+        <a href="index.html" class="btn-back">Kembali</a>
+    </div>
+
+    <script src="scriptk.js"></script>
+</body>
+</html>

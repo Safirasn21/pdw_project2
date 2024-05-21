@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketing Bioskop Offline</title>
+    <link rel="stylesheet" href="styleT.css">
+</head>
+<body>
+    <header> 
+        <h1>Ticketing Bioskop Offline</h1>
+    </header>
+
+    <div class="container">
+        <section class="search-form">
+            <h2>Cari Film</h2>
+            <input type="text" id="search" placeholder="Cari film...">
+            <button class="btn" onclick="searchMovies()">Cari</button>
+            <button class="btn btn-cancel" onclick="cancelSearch()">Batal</button>
+        </section>
+
+        <section class="movie-list">
+            <h2>Daftar Film</h2>
+            <div id="movieList" class="movie-grid"></div>
+        </section>
+
+        <section class="ticket-form">
+            <h2>Pemesanan Tiket</h2>
+            <form id="ticketForm">
+                <div>
+                    <label for="movie">Film:</label>
+                    <select id="movie" name="movie" required>
+                        <option value="" disabled selected>Pilih Film</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="tickets">Jumlah Tiket:</label>
+                    <input type="number" id="tickets" name="tickets" min="1" max="10" required>
+                </div>
+                <button type="submit" class="btn">Pesan Tiket</button>
+            </form>
+        </section>
+
+        <section class="ticket-list">
+            <h2>Daftar Pemesanan</h2>
+            <div id="ticketList"></div>
+            <button class="btn btn-delete" onclick="deleteBookings()">Hapus</button>
+        </section>
+
+        <div class="cancel-btn-container"> 
+            <a href="index.html" class="btn">Kembali</a> 
+        </div>
+    </div>
+
+    <script src="scriptT.js"></script>
+</body>
+</html>
